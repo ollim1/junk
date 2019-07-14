@@ -50,7 +50,7 @@ int main(int argc, char **argv)
     clock_gettime(CLOCK_MONOTONIC, &t);
     int i = 0;
     while (1) {
-        long nsec = t.tv_nsec + 16666667L;
+        long nsec = t.tv_nsec + 33333333L;
         if (nsec > 1000000000L) {
             t = (struct timespec){t.tv_sec + 1, nsec % 1000000000L};
         } else {
